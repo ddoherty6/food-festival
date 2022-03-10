@@ -9,6 +9,9 @@ module.exports = {
         schedule: './assets/js/schedule.js',
         tickets: './assets/js/tickets.js'
     },
+    devServer: {
+        static: "./"
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js'
@@ -17,10 +20,10 @@ module.exports = {
           new webpack.ProvidePlugin({
               $: "jquery",
               jQuery: "jquery"
-          }),
-          new BundleAnalyzerPlugin({
-              analyzerMode: "static" // the report outputs to an HTML file in the dist folder
-          })
+          })//,
+        //   new BundleAnalyzerPlugin({
+        //       analyzerMode: "static" // the report outputs to an HTML file in the dist folder
+        //   })
       ],
       module: {
           rules: [
